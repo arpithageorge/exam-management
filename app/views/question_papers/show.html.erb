@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @question_paper.question_id %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @question_paper.created_by %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @question_paper.updated_by %>
+</p>
+
+<%= link_to 'Edit', edit_question_paper_path(@question_paper) %> |
+<%= link_to 'Back', question_papers_path %>

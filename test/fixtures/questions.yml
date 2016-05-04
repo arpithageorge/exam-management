@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quize: MyString
+  option_id: 1
+  description: MyText
+  created_by: 1
+  updated_by: 1
+
+two:
+  quize: MyString
+  option_id: 1
+  description: MyText
+  created_by: 1
+  updated_by: 1
