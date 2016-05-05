@@ -20,15 +20,5 @@
   <%= @exam.total_score %>
 </p>
 
-<p>
-  <strong>Created by:</strong>
-  <%= @exam.created_by %>
-</p>
-
-<p>
-  <strong>Updated by:</strong>
-  <%= @exam.updated_by %>
-</p>
-
 <%= link_to 'Edit', edit_exam_path(@exam) %> |
 <%= link_to 'Back', exams_path %>

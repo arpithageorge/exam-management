@@ -5,57 +5,31 @@
 <table>
   <thead>
     <tr>
+      <th>Sl.No</th>
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
-      <th>Encrypted password</th>
-      <th>Confirmation token</th>
-      <th>Confirmed at</th>
-      <th>Confirmation sent at</th>
-      <th>Unconfirmed email</th>
-      <th>Reset password token</th>
-      <th>Reset password sent at</th>
-      <th>Remember created at</th>
       <th>Sign in count</th>
       <th>Current sign in at</th>
       <th>Last sign in at</th>
-      <th>Current sign in ip</th>
-      <th>Last sign in ip</th>
       <th>Notes</th>
-      <th>Active</th>
-      <th>Archived</th>
-      <th>Created by</th>
-      <th>Updated by</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.role_id %></td>
-        <td><%= user.encrypted_password %></td>
-        <td><%= user.confirmation_token %></td>
-        <td><%= user.confirmed_at %></td>
-        <td><%= user.confirmation_sent_at %></td>
-        <td><%= user.unconfirmed_email %></td>
-        <td><%= user.reset_password_token %></td>
-        <td><%= user.reset_password_sent_at %></td>
-        <td><%= user.remember_created_at %></td>
         <td><%= user.sign_in_count %></td>
         <td><%= user.current_sign_in_at %></td>
         <td><%= user.last_sign_in_at %></td>
-        <td><%= user.current_sign_in_ip %></td>
-        <td><%= user.last_sign_in_ip %></td>
         <td><%= user.notes %></td>
-        <td><%= user.active %></td>
-        <td><%= user.archived %></td>
-        <td><%= user.created_by %></td>
-        <td><%= user.updated_by %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Show |', user %></td>
+        <td><%= link_to 'Edit |', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

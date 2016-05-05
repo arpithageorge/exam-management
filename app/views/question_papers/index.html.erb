@@ -6,9 +6,7 @@
   <thead>
     <tr>
       <th>Question</th>
-      <th>Created by</th>
-      <th>Updated by</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -16,8 +14,6 @@
     <% @question_papers.each do |question_paper| %>
       <tr>
         <td><%= question_paper.question_id %></td>
-        <td><%= question_paper.created_by %></td>
-        <td><%= question_paper.updated_by %></td>
         <td><%= link_to 'Show', question_paper %></td>
         <td><%= link_to 'Edit', edit_question_paper_path(question_paper) %></td>
         <td><%= link_to 'Destroy', question_paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>

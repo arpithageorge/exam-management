@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
 
-  match '(errors)/:status', to: 'errors#show', constraints: { status: /\d{3}/ }, via: :all
+  devise_for :users
+  root to: 'home#index'
 
-  devise_for :users, skip: [:registrations]
-  as :user do
-    get 'my/profile/edit' => 'devise/registrations#edit', as: 'edit_user_registration'
-    patch 'my/profile' => 'devise/registrations#update', as: 'user_registration'
-  end
-
+  resources :users
   resources :options
   resources :questions
   resources :exams
