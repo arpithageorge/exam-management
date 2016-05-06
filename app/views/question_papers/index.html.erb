@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Sl.No</th>
       <th>Question</th>
       <th colspan="3">Actions</th>
     </tr>
@@ -13,9 +14,10 @@
   <tbody>
     <% @question_papers.each do |question_paper| %>
       <tr>
-        <td><%= question_paper.question_id %></td>
-        <td><%= link_to 'Show', question_paper %></td>
-        <td><%= link_to 'Edit', edit_question_paper_path(question_paper) %></td>
+        <td><%= question_paper.id %></td>
+        <td><%= question_paper.question.quize %></td>
+        <td><%= link_to 'Show', question_paper %> | </td>
+        <td><%= link_to 'Edit', edit_question_paper_path(question_paper) %> | </td>
         <td><%= link_to 'Destroy', question_paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

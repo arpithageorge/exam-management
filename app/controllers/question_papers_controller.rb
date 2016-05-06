@@ -15,6 +15,7 @@ class QuestionPapersController < ApplicationController
   # GET /question_papers/new
   def new
     @question_paper = QuestionPaper.new
+    @question = Question.all
   end
 
   # GET /question_papers/1/edit

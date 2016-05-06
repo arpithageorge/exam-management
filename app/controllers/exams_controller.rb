@@ -15,6 +15,8 @@ class ExamsController < ApplicationController
   # GET /exams/new
   def new
     @exam = Exam.new
+    @user = User.all
+    @question_paper = QuestionPaper.all
   end
 
   # GET /exams/1/edit

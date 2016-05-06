@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th>Sl.No</th>
+      <th>Role</th>
       <th>Name</th>
       <th>Email</th>
-      <th>Role</th>
       <th>Sign in count</th>
       <th>Current sign in at</th>
       <th>Last sign in at</th>
@@ -21,15 +21,15 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.id %></td>
+        <td><%= user.role.name %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.role_id %></td>
         <td><%= user.sign_in_count %></td>
         <td><%= user.current_sign_in_at %></td>
         <td><%= user.last_sign_in_at %></td>
         <td><%= user.notes %></td>
-        <td><%= link_to 'Show |', user %></td>
-        <td><%= link_to 'Edit |', edit_user_path(user) %></td>
+        <td><%= link_to 'Show', user %> | </td>
+        <td><%= link_to 'Edit', edit_user_path(user) %> | </td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

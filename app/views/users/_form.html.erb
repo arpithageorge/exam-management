@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :role_id %><br>
-    <%= f.number_field :role_id %>
+    <%= f.collection_select :role_id, Role.order(:name),:id,:name, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :notes %><br>

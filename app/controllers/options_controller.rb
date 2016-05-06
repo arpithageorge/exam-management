@@ -15,6 +15,7 @@ class OptionsController < ApplicationController
   # GET /options/new
   def new
     @option = Option.new
+    @question = Question.all
   end
 
   # GET /options/1/edit

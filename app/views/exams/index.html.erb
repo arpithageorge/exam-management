@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Sl.no</th>
       <th>User</th>
       <th>Exam date</th>
       <th>Question paper</th>
@@ -16,12 +17,13 @@
   <tbody>
     <% @exams.each do |exam| %>
       <tr>
-        <td><%= exam.user_id %></td>
+        <td><%= exam.id %></td>
+        <td><%= exam.user.name %></td>
         <td><%= exam.exam_date %></td>
         <td><%= exam.question_paper_id %></td>
         <td><%= exam.total_score %></td>
-        <td><%= link_to 'Show', exam %></td>
-        <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
+        <td><%= link_to 'Show', exam %> | </td>
+        <td><%= link_to 'Edit', edit_exam_path(exam) %> | </td>
         <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

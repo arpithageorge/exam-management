@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Sl.no</th>
       <th>Question</th>
       <th>Choice</th>
       <th colspan="3">Actions</th>
@@ -14,10 +15,11 @@
   <tbody>
     <% @options.each do |option| %>
       <tr>
-        <td><%= option.question_id %></td>
+        <td><%= option.id %></td>
+        <td><%= option.question.quize %></td>
         <td><%= option.choice %></td>
-        <td><%= link_to 'Show', option %></td>
-        <td><%= link_to 'Edit', edit_option_path(option) %></td>
+        <td><%= link_to 'Show', option %> | </td>
+        <td><%= link_to 'Edit', edit_option_path(option) %> | </td>
         <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :question_id %><br>
-    <%= f.number_field :question_id %>
+    <%= f.collection_select :question_id, Question.order(:quize),:id,:quize, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :choice %><br>
