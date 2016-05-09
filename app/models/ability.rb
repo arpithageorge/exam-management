@@ -7,7 +7,7 @@ class Ability
     if user.has_role? :admin
       can :manage, :all  # can manage (Read, Create, Update, Destroy, ...) everything
     else # Users without role
-      can :Create, Exam  # can manage (Read, Create, Update, Destroy, ...) any Forum
+      can :create, Exam 
     end
   end
 end
