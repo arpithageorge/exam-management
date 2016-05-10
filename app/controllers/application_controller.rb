@@ -20,9 +20,4 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, alert: exception.message
   end
 
-  layout :layout_by_resource
-
-  def layout_by_resource
-    "application"
-  end
 end
